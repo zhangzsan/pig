@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.pig4cloud</groupId>
+        <artifactId>pig</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>pig-common</artifactId>
+    <packaging>pom</packaging>
+
+    <description>pig 公共聚合模块</description>
+
+    <modules>
+           <!--定义把版本依赖-->
+        <module>pig-common-bom</module>
+        <module>pig-common-core</module>
+          <!-- 定义数据库连接-->
+        <module>pig-common-datasource</module>
+          <!--定义日志模块-->
+        <module>pig-common-log</module>
+        <module>pig-common-mybatis</module>
+        <!--文件上传模块-->
+        <module>pig-common-oss</module>
+        <!--定义分布式事务-->
+        <module>pig-common-seata</module>
+        <!--安全校验模块-->
+        <module>pig-common-security</module>
+        <!--远程调用-->
+        <module>pig-common-feign</module>
+        <!-- 文档生成模块-->
+        <module>pig-common-swagger</module>
+        <module>pig-common-websocket</module>
+        <module>pig-common-xss</module>
+        <!--导入导出模块-->
+        <module>pig-common-excel</module>
+    </modules>
+</project>

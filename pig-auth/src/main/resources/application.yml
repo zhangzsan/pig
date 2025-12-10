@@ -1,0 +1,25 @@
+server:
+  port: 3000
+
+spring:
+  application:
+    name: @artifactId@
+  cloud:
+    nacos:
+      username: @nacos.username@
+      password: @nacos.password@
+      discovery:
+        server-addr: ${NACOS_HOST:192.168.2.18}:${NACOS_PORT:8848},${NACOS_HOST:192.168.2.18}:${NACOS_PORT:8850},${NACOS_HOST:192.168.2.18}:${NACOS_PORT:8852}
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+  config:
+    import:
+      - nacos:application-@profiles.active@.yml
+      - nacos:${spring.application.name}-@profiles.active@.yml
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.http.server.reactive: DEBUG
+
+

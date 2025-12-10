@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.pig4cloud</groupId>
+        <artifactId>pig-common</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>pig-common-log</artifactId>
+    <packaging>jar</packaging>
+
+    <description>pig 异步记录日志模块</description>
+
+    <dependencies>
+        <!--接口模块-->
+        <dependency>
+            <groupId>com.pig4cloud</groupId>
+            <artifactId>pig-upms-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-extra</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-http</artifactId>
+        </dependency>
+    </dependencies>
+</project>

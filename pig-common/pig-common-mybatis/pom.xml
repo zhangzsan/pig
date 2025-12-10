@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.pig4cloud</groupId>
+        <artifactId>pig-common</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>pig-common-mybatis</artifactId>
+    <packaging>jar</packaging>
+
+    <description>pig mybatis 封装</description>
+
+
+    <dependencies>
+        <!--hutool-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-core</artifactId>
+        </dependency>
+        <!--mybatis-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring</artifactId>
+        </dependency>
+        <!-- mybatis-plus 3.5.9 需要单独引入此依赖-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-jsqlparser</artifactId>
+        </dependency>
+        <!--swagger  注解-->
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations-jakarta</artifactId>
+        </dependency>
+        <!--servlet-api-->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--security 依赖-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>6.5.4</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.pig4cloud</groupId>
+            <artifactId>pig-common-core</artifactId>
+        </dependency>
+    </dependencies>
+</project>

@@ -1,0 +1,22 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: @artifactId@
+  cloud:
+    nacos:
+      username: @nacos.username@
+      password: @nacos.password@
+      discovery:
+        server-addr: ${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
+        watch:
+          enabled: true   #开启配置监听
+        watch-delay: 1000   # 监听延迟/间隔(毫秒)
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+  config:
+      # 加载通用配置,optional可选,当文件不存在时,也不会报错
+      - optional:nacos:application-@profiles.active@.yml
+      # 加载专用配置
+      - optional:nacos:${spring.application.name}-@profiles.active@.yml
+
