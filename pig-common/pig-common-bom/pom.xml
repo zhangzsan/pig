@@ -154,12 +154,13 @@
                 <artifactId>excel-spring-boot-starter</artifactId>
                 <version>${excel.version}</version>
             </dependency>
-            <!-- commons.io 覆盖Easyexcel-->
+            <!-- commons.io 覆盖Easy excel-->
             <dependency>
                 <artifactId>commons-io</artifactId>
                 <groupId>commons-io</groupId>
                 <version>${common.io.version}</version>
             </dependency>
+            <!--数据库分库相关的依赖-->
             <dependency>
                 <groupId>org.apache.shardingsphere</groupId>
                 <artifactId>shardingsphere-jdbc-core</artifactId>

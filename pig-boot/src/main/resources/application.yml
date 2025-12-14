@@ -45,10 +45,10 @@ security:
         - /webjars/**
         - /v3/api-docs/**
         - /doc.html
-        - /swagger-ui.html
+        - /swagger-ui.html   # v2对应的版本
         - /swagger-ui/**
         - /swagger-resources
-        - /code/image
+        - /code/image        # 生成验证码的图片
         - /error
         - /token/**
         - /actuator/**

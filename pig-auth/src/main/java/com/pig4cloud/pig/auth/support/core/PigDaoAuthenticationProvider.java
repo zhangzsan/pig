@@ -99,6 +99,7 @@ public class PigDaoAuthenticationProvider extends AbstractUserDetailsAuthenticat
 	 * 根据用户名检索用户详情
 	 * username 用户名
 	 * authentication 认证令牌
+     * 核心认证逻辑
 	 */
 	@SneakyThrows
 	@Override
