@@ -23,9 +23,9 @@ import org.springframework.expression.EvaluationContext;
 public class SysLogAspect {
 
     /**
-     * 环绕通知方法，用于处理系统日志记录
+     * 环绕通知方法，用于处理系统日志记录,针对SysLog注解添加环绕通知
      */
-    @Around("@annotation(sysLog)")  //针对使用SysLog注解
+    @Around("@annotation(sysLog)")
     @SneakyThrows  //异常不抛出
     public Object around(ProceedingJoinPoint point, SysLog sysLog) {
         String className = point.getTarget().getClass().getName();

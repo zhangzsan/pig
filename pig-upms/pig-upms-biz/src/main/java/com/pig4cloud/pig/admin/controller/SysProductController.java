@@ -26,9 +26,7 @@ import java.util.List;
 
 /**
  * 商品
- *
  * @author pig
- * @date 2025-12-04 22:27:09
  */
 @RestController
 @RequiredArgsConstructor
@@ -72,40 +70,36 @@ public class SysProductController {
 
     /**
      * 新增商品
-     * @param sysProduct 商品
-     * @return R
      */
     @Operation(summary = "新增商品" , description = "新增商品" )
     @SysLog("新增商品" )
     @PostMapping
     @HasPermission("admin_sys_product_add")
-    public Result save(@RequestBody SysProductEntity sysProduct) {
+    public Result<Boolean> save(@RequestBody SysProductEntity sysProduct) {
         return Result.ok(sysProductService.save(sysProduct));
     }
 
     /**
      * 修改商品
      * @param sysProduct 商品
-     * @return R
      */
     @Operation(summary = "修改商品" , description = "修改商品" )
     @SysLog("修改商品" )
     @PutMapping
     @HasPermission("admin_sys_product_edit")
-    public Result updateById(@RequestBody SysProductEntity sysProduct) {
+    public Result<Boolean> updateById(@RequestBody SysProductEntity sysProduct) {
         return Result.ok(sysProductService.updateById(sysProduct));
     }
 
     /**
      * 通过id删除商品
      * @param ids productId列表
-     * @return R
      */
     @Operation(summary = "通过id删除商品" , description = "通过id删除商品" )
     @SysLog("通过id删除商品" )
     @DeleteMapping
     @HasPermission("admin_sys_product_del")
-    public Result removeById(@RequestBody Long[] ids) {
+    public Result<Boolean> removeById(@RequestBody Long[] ids) {
         return Result.ok(sysProductService.removeBatchByIds(CollUtil.toList(ids)));
     }
 
@@ -114,7 +108,6 @@ public class SysProductController {
      * 导出excel 表格
      * @param sysProduct 查询条件
    	 * @param ids 导出指定ID
-     * @return excel 文件流
      */
     @ResponseExcel
     @GetMapping("/export")
@@ -124,10 +117,7 @@ public class SysProductController {
     }
 
     /**
-     * 导入excel 表
      * @param sysProductList 对象实体列表
-     * @param bindingResult 错误信息列表
-     * @return ok fail
      */
     @PostMapping("/import")
     @HasPermission("admin_sys_product_export")

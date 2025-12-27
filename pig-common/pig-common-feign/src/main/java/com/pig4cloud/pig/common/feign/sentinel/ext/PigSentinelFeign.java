@@ -19,7 +19,7 @@ import java.lang.reflect.Method;
 import java.util.Map;
 
 /**
- * 支持自动降级注入的Feign构建器，重写 {@link com.alibaba.cloud.sentinel.feign.SentinelFeign}
+ * 支持自动降级注入的Feign构建器
  *
  */
 public final class PigSentinelFeign {

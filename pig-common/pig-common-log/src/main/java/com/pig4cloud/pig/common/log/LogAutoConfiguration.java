@@ -14,7 +14,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
  * 日志自动配置类，用于配置系统日志相关功能
  */
 @EnableAsync       // 启用Spring的异步方法执行功能
-@Configuration(proxyBeanMethods = false)  // 配置类，不代理Bean方法
+@Configuration(proxyBeanMethods = false)  // 配置类,不代理Bean方法
 @EnableConfigurationProperties(PigLogProperties.class)  // 启用配置属性绑定
 @ConditionalOnProperty(value = "security.log.enabled", matchIfMissing = true) // 条件配置,表示如果配置文件中没有这个属性,默认启用日志功能
 public class LogAutoConfiguration {
